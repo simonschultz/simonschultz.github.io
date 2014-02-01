@@ -1,0 +1,20 @@
+<div id="shelf" class="px clip">
+  <div class="scroll">
+
+    <div class="accordion list">
+      <ul>
+        <li id="meet-pz" class="selected"><a href="/" class="parent" onclick="paginate.scrollToPage(0);return false" data-styles="selected" data-styles-target="#meet-pz"><strong>pinch/zoom</strong></a>
+          <ul>
+          
+          {% for post in site.categories.home %}
+          <li><a href="/#{{ post.index }}" class="child" onclick="paginate.scrollToPage({{ post.index }});return false"><strong>{{ post.title }}</strong></a></li>
+          {% endfor %}
+          
+          </ul>
+        </li>
+      </ul>
+    </div>
+
+  </div>
+</div>
+<a class="mask" href='' data-unpush="shelf"></a>
